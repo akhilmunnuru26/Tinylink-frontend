@@ -1,8 +1,10 @@
+
 import axios from 'axios';
+
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
-
+// console.log('🔗 API URL:', API_URL); // Debug log
 
 const api = axios.create({
   baseURL: API_URL,
@@ -13,8 +15,7 @@ const api = axios.create({
 
 // Create short link
 export const createLink = async (targetUrl, customCode = '') => {
-  const url = API_URL+'/api/links';
-  const response = await api.post(url, {
+  const response = await api.post('/api/links', {
     target_url: targetUrl,
     custom_code: customCode,
   });
@@ -23,29 +24,25 @@ export const createLink = async (targetUrl, customCode = '') => {
 
 // Get all links
 export const getAllLinks = async () => {
-  const url = API_URL+'/api/links';
-  const response = await api.get(url);
+  const response = await api.get('/api/links');
   return response.data;
 };
 
 // Get link stats
 export const getLinkStats = async (code) => {
- const url = API_URL+`/api/links/${code}`;
-  const response = await api.get(url);
+  const response = await api.get(`/api/links/${code}`);
   return response.data;
 };
 
 // Delete link
 export const deleteLink = async (code) => {
-  const url = API_URL+`/api/links/${code}`;
-  const response = await api.delete(url);
+  const response = await api.delete(`/api/links/${code}`);
   return response.data;
 };
 
 // Health check
 export const healthCheck = async () => {
-  const url = API_URL+'/healthz';
-  const response = await api.get(url);
+  const response = await api.get('/healthz');
   return response.data;
 };
 
