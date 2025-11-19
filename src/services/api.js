@@ -12,7 +12,7 @@ const api = axios.create({
 
 // Create short link
 export const createLink = async (targetUrl, customCode = '') => {
-  const response = await api.post('/api/links', {
+  const response = await api.post('http://localhost:5174/api/links', {
     target_url: targetUrl,
     custom_code: customCode,
   });
@@ -21,25 +21,25 @@ export const createLink = async (targetUrl, customCode = '') => {
 
 // Get all links
 export const getAllLinks = async () => {
-  const response = await api.get('/api/links');
+  const response = await api.get('http://localhost:5174/api/links');
   return response.data;
 };
 
 // Get link stats
 export const getLinkStats = async (code) => {
-  const response = await api.get(`/api/links/${code}`);
+  const response = await api.get(`http://localhost:5174/api/links/${code}`);
   return response.data;
 };
 
 // Delete link
 export const deleteLink = async (code) => {
-  const response = await api.delete(`/api/links/${code}`);
+  const response = await api.delete(`http://localhost:5174/api/links/${code}`);
   return response.data;
 };
 
 // Health check
 export const healthCheck = async () => {
-  const response = await api.get('/healthz');
+  const response = await api.get('http://localhost:5174/healthz');
   return response.data;
 };
 

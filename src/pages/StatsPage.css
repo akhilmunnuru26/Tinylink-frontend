@@ -1,0 +1,130 @@
+/* src/pages/StatsPage.css */
+
+.stats-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stats-page header {
+  margin-bottom: 30px;
+}
+
+/* Back Link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background-color: var(--primary-light);
+  text-decoration: none;
+}
+
+.stats-page h1 {
+  font-size: 32px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+/* Stats Card */
+.stats-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 30px;
+  display: grid;
+  gap: 24px;
+}
+
+/* Stat Item */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stat-item label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-size: 18px;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.stat-value code {
+  font-size: 20px;
+  padding: 6px 12px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.stat-value a {
+  color: var(--primary-color);
+  word-break: break-all;
+}
+
+.stat-value.clicks {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Loading State */
+.stats-page .loading {
+  min-height: 300px;
+}
+
+/* Error State */
+.stats-page .error-page {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-page {
+    padding: 10px;
+  }
+
+  .stats-card {
+    padding: 20px;
+  }
+
+  .stats-page h1 {
+    font-size: 24px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+
+  .stat-value.clicks {
+    font-size: 28px;
+  }
+}
