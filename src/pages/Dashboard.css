@@ -1,12 +1,10 @@
-/* src/pages/Dashboard.css */
-
 .dashboard {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header Section */
+
 .dashboard-header {
   text-align: center;
   margin-bottom: 40px;
@@ -70,7 +68,7 @@
   margin: 0;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .dashboard {
     padding: 10px;

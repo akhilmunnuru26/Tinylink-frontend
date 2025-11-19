@@ -1,4 +1,3 @@
-// src/pages/StatsPage.jsx
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getLinkStats } from '../services/api';

@@ -1,4 +1,3 @@
-// src/components/LinkTable.jsx
 import { useState } from 'react';
 import './LinkTable.css';
 

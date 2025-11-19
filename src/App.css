@@ -1,5 +1,3 @@
-/* src/App.css */
-
 .app {
   min-height: 100vh;
   background-color: var(--bg-secondary);
@@ -24,12 +22,12 @@
   background: var(--text-muted);
 }
 
-/* Smooth Scrolling */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Focus Visible for Accessibility */
+
 *:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
